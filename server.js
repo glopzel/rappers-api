@@ -32,7 +32,7 @@ app.get('/', (request, response) => {
 // after the api/ a colon and a parameter that stands for the query parameter
 app.get('/api/:name', (request, response) => {
     // you grab whatever goes after /api/, you grab what was entered console.log(request.params.name)
-    const rapperName = request.params.name.toLocaleLowerCase()
+    const rapperName = request.params.name.toLowerCase()
     // see if name entered exists on our object, if rapperName exists within the object rappers
     if (rappers[rapperName]) {
         // i want to respond with json
