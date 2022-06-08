@@ -40,6 +40,7 @@ app.get('/api/:name', (request, response) => {
     }
 })
 
-app.listen( PORT ,() => {
+// to avoid the error Web process failed to bind to $PORT you use process.env.PORT
+app.listen( process.env.PORT || PORT,() => {
     console.log(`the server now is running on port ${PORT}, better go catch it!`);
 });
